@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Transfer to aggregator </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3 text-center *ngIf="selectedItem">
+    {{selectedItem.title}} - {{selectedItem.type}}
+    <ion-icon [name]="selectedItem.type"></ion-icon>
+  </h3>
+  <h4 text-center *ngIf="selectedItem">
+    <b>{{selectedItem.description}}</b>
+  </h4>
+  
+  
+  
+
+
+  <ion-list>
+  
+  <button ion-button round (click)="transferToAggregator()">Tranfer to aggregator</button>
+
+
+  
+	
+  </ion-list>
+
+  
+</ion-content>
